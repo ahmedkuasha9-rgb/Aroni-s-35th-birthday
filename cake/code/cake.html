@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magical Birthday Cake</title>
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+  <body
+  >
+    <video class="page-background-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1">
+      <source src="../assets/background/cake%20page%20bg.mp4" type="video/mp4">
+    </video>
+    <!-- Balloons and Confetti will be added by JavaScript -->
+
+    <!-- Birthday Cake -->
+    <div class="cake-container" bis_skin_checked="1">
+      <div class="cake" bis_skin_checked="1">
+        <div class="cake-board"></div>
+        <div class="cake-tier tier-bottom"><div class="tier-sprinkles"></div></div>
+        <div class="cake-tier tier-middle"><div class="tier-sprinkles"></div></div>
+        <div class="cake-tier tier-top"><div class="tier-sprinkles"></div></div>
+        <div class="candle-container candles-bottom" id="bottomCandles" aria-label="20 candles on the bottom tier"></div>
+        <div class="candle-container candles-middle" id="middleCandles" aria-label="10 candles on the middle tier"></div>
+        <div class="candle-container candles-top" id="topCandles" aria-label="5 candles on the top tier"></div>
+      </div>
+    </div>
+
+    <img class="cake-confetti-burst" id="cakeConfettiBurst" data-src="../assets/gifs/cake%20confetti.gif" alt="" aria-hidden="true" />
+    <audio id="candleBlowSound" src="../assets/audio/audio%20effect/cake%20blow%20out%20sound.mp3" preload="auto" data-volume="0.7"></audio>
+    <audio id="cheerSound" src="../assets/audio/audio%20effect/cheer.mp3" preload="auto" data-volume="0.15"></audio>
+    <div class="wish-message instruction-message" id="instructionMessage" aria-live="polite">
+      <p>Blow the candles and pop the balloons &#127881; &#127880;</p>
+    </div>
+
+    <!-- Enhanced Wish Message Popup -->
+    <div class="wish-message" id="wishMessage">
+      <video class="wish-message-background-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1">
+        <source src="../assets/background/hug%20window%20bg.mp4" type="video/mp4">
+      </video>
+      <h2>HAPPPY BIRTHDAY!!!!</h2>
+      <p class="birthday-kiss-text">Uuuuuuuuuuuuuuummmmmmmmmmmmmmaaaaaaaaaaaaaaaaahhhhhhhhhhhhh!!!!!!!!</p>
+      <img class="wish-gif" id="wishGif" src="../assets/gifs/birthday%20celebration.gif" alt="Birthday celebration GIF" hidden />
+      <p id="wishGifHelp">Could not load <strong>birthday celebration.gif</strong>.</p>
+      <button class="btn" onclick="closeWishMessage()">Thank you!</button>
+    </div>
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons" bis_skin_checked="1">
+      <button class="btn" onclick="goBack()">◀ Back to Memory Lane</button>
+      <button class="btn" onclick="goNext()">Next Surprise ▶</button>
+    </div>
+
+    
+
+      
+        <script src="script.js"></script>
+</body>
+</html>

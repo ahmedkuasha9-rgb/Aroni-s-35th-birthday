@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Surprise For You ✨</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+    
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video class="page-background-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1">
+        <source src="../assets/background/letter%20page%20bg.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <header>
+            <h1>For My Dearest ❤️</h1>
+        </header>
+
+        <div class="letter-container">
+            <div class="letter" id="typed-text"></div>
+        </div>
+
+        <div class="video-container" id="video-message">
+            <!-- Replace with your video embed code -->
+            <iframe src="about:blank" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="surprise-button-container">
+            <button class="surprise-button" id="surprise-button">
+                Click for a Surprise! 🎁
+            </button>
+        </div>
+
+        <div class="navigation">
+            <a href="javascript:history.back()" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Birthday Cake
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal for Surprise -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+            <video class="modal-background-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1">
+                <source src="../assets/background/music%20player%20bg.mp4" type="video/mp4">
+            </video>
+            <button class="modal-close" id="modal-close">×</button>
+            <div class="modal-header">
+                <h2>🎉 Your Special Surprise! 🎉</h2>
+            </div>
+            <div class="modal-body">
+                <div class="playlist">
+                    <h3 style="margin-bottom: 15px;">Songs That Remind Me of Us 💕</h3>
+                    <div class="playlist-item" data-track="0">
+                        <img src="../assets/photos/1.jpeg" alt="Song 1 cover">
+                        <div class="playlist-item-info">
+                            <div class="playlist-item-title">First song that made us realize our similarities</div>
+                        </div>
+                        <button class="playlist-item-play" type="button" aria-label="Play song 1"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="playlist-item" data-track="1">
+                        <img src="../assets/photos/2.jpeg" alt="Song 2 cover">
+                        <div class="playlist-item-info">
+                            <div class="playlist-item-title">First song that we bonded over</div>
+                        </div>
+                        <button class="playlist-item-play" type="button" aria-label="Play song 2"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="playlist-item" data-track="2">
+                        <img src="../assets/photos/3.jpeg" alt="Song 3 cover">
+                        <div class="playlist-item-info">
+                            <div class="playlist-item-title">First song I wanted to dance with you</div>
+                        </div>
+                        <button class="playlist-item-play" type="button" aria-label="Play song 3"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="playlist-item" data-track="3">
+                        <img src="../assets/photos/4.jpeg" alt="Song 4 cover">
+                        <div class="playlist-item-info">
+                            <div class="playlist-item-title">First dirty bangla song you heard :3</div>
+                        </div>
+                        <button class="playlist-item-play" type="button" aria-label="Play song 4"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="playlist-item" data-track="4">
+                        <img src="../assets/photos/5.jpeg" alt="Song 5 cover">
+                        <div class="playlist-item-info">
+                            <div class="playlist-item-title">Guess which one this is ;)</div>
+                        </div>
+                        <button class="playlist-item-play" type="button" aria-label="Play song 5"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <button type="button" class="back-button final-gift-button" id="showFinalGift" style="background: #ffb6c1; border-color: #ffb6c1; color: black;">
+                        <i class="fas fa-gift"></i> Your Final Gift
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="final-gift-overlay" id="finalGiftOverlay" aria-hidden="true">
+        <div class="final-gift-window" role="dialog" aria-modal="true" aria-label="Your final gift">
+            <video class="final-gift-background-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1">
+                <source src="../assets/background/final%20gift%20window%20bg.mp4" type="video/mp4">
+            </video>
+            <button type="button" class="final-gift-close" id="closeFinalGift" aria-label="Close final gift">&times;</button>
+            <h2>10000000000000000000
+00000000000000000000
+00000000000000000000
+00000000000000000000
+00000000000000000000
+00000000000000000000
+00000000000000000000
+00000000000000000000
+00000000000000000000
+00000000000000000000
+00000000000000000000
+00000000000000000000
+00000000000000000000
+00000000000000000000
+00000000000000000000
+00000000000000000000
+00000000000000000000
+00000000000000000000
+00000000000000000000
+00000000000000000000
+00000000000000000000
+kisses for youuuuuuuuuu</h2>
+            <img src="../assets/gifs/Final%20Gift.gif" alt="Your final gift GIF">
+        </div>
+    </div>
+
+    <!-- Music Controls -->
+    <div class="music-controls" id="music-toggle">
+        <i class="fas fa-volume-mute" id="music-icon"></i>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="click-sound" preload="auto">
+        <source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_bb630cc098.mp3?filename=cute-notification-ringtone-1-173850.mp3" type="audio/mpeg">
+    </audio>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-confetti/1.5.1/confetti.browser.min.js"></script>
+
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>

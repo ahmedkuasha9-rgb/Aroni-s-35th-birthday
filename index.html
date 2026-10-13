@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Surprise</title>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <iframe id="page-content" src="welcome/code/welcome.html" title="Birthday surprise pages"></iframe>
+  <div class="persistent-music" aria-label="Background music controls">
+    <button id="musicToggle" type="button" aria-label="Play music" title="Play or pause music">▶️</button>
+    <label for="musicVolume">Volume</label>
+    <input id="musicVolume" type="range" min="0" max="1" step="0.01" value="0.5" aria-label="Music volume" />
+    <video class="persistent-music-bg" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1"><source src="letter/assets/background/music%20player%20bg.mp4" type="video/mp4" /></video>
+  </div>
+  <audio id="siteMusic" loop preload="auto">
+    <source src="welcome/assets/audio/main%20song.mp3" type="audio/mpeg" />
+  </audio>
+  
+  
+    <script src="index.js"></script>
+</body>
+</html>
